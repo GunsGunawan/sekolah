@@ -1,6 +1,6 @@
 <div class="faq-page-area">
     <div class="container">
-        <h1 class="about-title">Kenapa Harus SMK Yadika Natar ?</h1>
+        <h1 class="about-title">Kenapa Harus SMA Negeri 1 Praya ?</h1>
         <div class="row panel-group" id="faq-accordian">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="faq-box-wrapper">
@@ -65,7 +65,7 @@
                             <div class="panel-title faq-box-title">
                                 <h3>
                                     <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                                        <span class="faq-box-count">4</span>Beasiswa Sekolah dan Kampus.
+                                        <span class="faq-box-count">4</span>Beasiswa Sekolah.
                                     </a>
                                 </h3>
                             </div>

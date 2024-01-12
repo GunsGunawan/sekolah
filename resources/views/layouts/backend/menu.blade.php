@@ -54,7 +54,7 @@
                     </li>
                     <li class="nav-item {{ (request()->is('backend-kegiatan')) ? 'active' : '' }}">
                         <a class="d-flex align-items-center" href=" {{route('backend-kegiatan.index')}} "><i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Basic">Kegiatan</span>
+                            <span class="menu-item text-truncate" data-i18n="Basic">Ekstra kulikuler</span>
                         </a>
                     </li>
                     <li class="nav-item {{ (request()->is('backend-imageslider')) ? 'active' : '' }}">

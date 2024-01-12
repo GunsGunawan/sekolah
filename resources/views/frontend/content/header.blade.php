@@ -6,7 +6,7 @@
                     <div class="header-top-left">
                         <div class="logo-area">
                             @if (@$footer->logo == NULL)
-                            <img class="img-responsive" src="{{asset('Assets/Frontend/img/logo-footer.png')}}" alt="logo">
+                            <img class="img-responsive" src="{{asset('Assets/Frontend/img/logo-footer2.png')}}" alt="logo">
                         @else
                             <img class="img-responsive" src="{{asset('storage/images/logo/' .$footer->logo)}}" alt="logo">
                         @endif
@@ -16,20 +16,37 @@
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                     <div class="header-top-right">
                         <ul>
+                            {{-- <style>
+                                .fa-envelope {
+                                    font-size: 18px;
+                                    color: #f1b10d;
+                                }
+                            </style>
+                            <li>
+                            <a href="https://wa.me/6287722722518" target="_blank">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="mailto:gunawanefendi8283@gmail.com.com">
+                                <i class="fa fa-envelope"></i>
+                                </a>
+                            </li> --}}
+                            
                             <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:{{@$footer->telp}}"> {{@$footer->telp}} </a></li>
                             <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">{{@$footer->email}}</a></li>
                             <li>
                                 @auth
                                     <a href="/home" class="apply-now-btn2">Home</a>
                                 @else
-                                    <a class="apply-now-btn2" href="{{route('login')}}"> Masuk</a>
-                                @endauth
+                                    <a class="apply-now-btn2" href="{{route('login')}}"> Login</a>
+                                @endauth    
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>      
     </div>
     <div class="main-menu-area bg-primary" id="sticker">
         <div class="container">
@@ -38,7 +55,7 @@
                     <nav id="desktop-nav">
                         <ul>
                             <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="/">Beranda</a></li>
-                            <li><a href="#">Tentang Kami</a>
+                            <li><a href="#">Tentang Sekolah</a>
                                 <ul>
                                     <li><a href=" {{route('profile.sekolah')}} ">Profile Sekolah</a></li>
                                     <li><a href=" {{route('visimisi.sekolah')}} ">Visi dan Misi</a></li>
@@ -54,7 +71,7 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li class="has-child-menu"><a href="#">Kegiatan</a>
+                                    <li class="has-child-menu"><a href="#">Ekstra Kulikuler</a>
                                         <ul class="thired-level">
                                             @foreach ($kegiatanM as $kegiatans)
                                                 <li><a href=" {{url('kegiatan', $kegiatans->slug)}} ">{{$kegiatans->nama}}</a></li>
@@ -69,7 +86,8 @@
                             <li><a href="#">Lainnya</a>
                                 <ul>
                                     <li><a href=" {{url('murid/perpustakaan')}} ">Perpustakaan</a></li>
-                                    <li><a href="">Alumni</a></li>
+                                    {{-- <li><a href="{{ route('alumni') }}">Alumni(Tahap Pengembangan)</a></li> --}}
+                                    <li><a href="">Alumni(Tahap Pengembangan)</a></li>
                                 </ul>
                             </li>
                         </ul>

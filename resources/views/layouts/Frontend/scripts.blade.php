@@ -1,3 +1,4 @@
+{{-- <<link rel="shortcut icon" href="{{ asset('favicon.png') }}" /> --}}
 <!-- jquery-->
 <script src="{{asset('Assets/Frontend/js/jquery-2.2.4.min.js')}}" type="text/javascript"></script>
 <!-- Plugins js -->

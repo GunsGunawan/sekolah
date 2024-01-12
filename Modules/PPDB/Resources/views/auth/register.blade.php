@@ -9,7 +9,7 @@
     <meta name="description" content="Sekolahku adalah aplikasi manajemen sekolah berbasis website yang di bangun dan di kembangkan dengan Framework Laravel">
     <meta name="keywords" content="">
     <meta name="author" content="Andri Desmana">
-    <title>Register Page - SekolahKu</title>
+    <title>Register Page - SMAN 1 Praya</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
@@ -71,12 +71,12 @@
                                     </g>
                                 </g>
                             </svg>
-                            <h2 class="brand-text text-primary ml-1">SekolahKu</h2>
+                            <h2 class="brand-text text-primary ml-1">SMA Negeri 1 Praya</h2>
                         </a>
                         <!-- /Brand logo-->
                         <!-- Left Text-->
                         <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
-                            <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="{{asset('Assets/Backend/images/illustration/login-v2.svg')}}" alt="Login V2" /></div>
+                            <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="{{asset('Assets/Backend/images/illustration/login2.png')}}" alt="Login V2" /></div>
                         </div>
                         <!-- /Left Text-->
                         <!-- Login-->

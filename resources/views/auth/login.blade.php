@@ -3,13 +3,14 @@
 <!-- BEGIN: Head-->
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    {{-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
     <meta name="description" content="Sekolahku adalah aplikasi manajemen sekolah berbasis website yang di bangun dan di kembangkan dengan Framework Laravel">
     <meta name="keywords" content="">
-    <meta name="author" content="Andri Desmana">
-    <title>Login Page - SekolahKu</title>
+    <meta name="author" content=""> --}}
+    <title>Login Page - SMAN 1 Praya</title>
+    <link rel="shortcut icon" href="{{ URL::to('Assets/icons/favicon.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
@@ -71,12 +72,12 @@
                                     </g>
                                 </g>
                             </svg>
-                            <h2 class="brand-text text-primary ml-1">SekolahKu</h2>
+                            <h2 class="brand-text text-primary ml-1">SchoolVibe</h2>
                         </a>
                         <!-- /Brand logo-->
                         <!-- Left Text-->
                         <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
-                            <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="{{asset('Assets/Backend/images/illustration/login-v2.svg')}}" alt="Login V2" /></div>
+                            <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="{{asset('Assets/Backend/images/illustration/login2.png')}}" alt="Login V2" /></div>
                         </div>
                         <!-- /Left Text-->
                         <!-- Login-->
@@ -97,7 +98,7 @@
                                     </div>
                                 </div>
                                 @endif
-                                <h2 class="card-title font-weight-bold mb-1">Welcome to SekolahKu! 👋</h2>
+                                <h2 class="card-title font-weight-bold mb-1">Welcome to SMAN 1 Praya! 👋</h2>
                                 <p class="card-text mb-2">Silakan masuk ke akun Anda dan mulai petualangan</p>
                                 <form class="auth-login-form mt-2" action="{{route('login')}}" method="POST">
                                     @csrf
@@ -174,3 +175,4 @@
 <!-- END: Body-->
 
 </html>
+    

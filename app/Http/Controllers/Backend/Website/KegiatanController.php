@@ -9,6 +9,8 @@ use App\Http\Requests\KegiatanRequest;
 use ErrorException;
 use Session;
 use DB;
+use Illuminate\Contracts\Session\Session as SessionSession;
+use Illuminate\Support\Facades\Storage;
 
 class KegiatanController extends Controller
 {
@@ -44,10 +46,10 @@ class KegiatanController extends Controller
         try {
             if ($request->image) {
                 $image = $request->file('image');
-                $nama_img = time()."_".$image->getClientOriginalName();
+                $nama_img = time() . "_" . $image->getClientOriginalName();
                 // isi dengan nama folder tempat kemana file diupload
                 $tujuan_upload = 'public/images/kegiatan';
-                $image->storeAs($tujuan_upload,$nama_img);
+                $image->storeAs($tujuan_upload, $nama_img);
             }
 
             $url = \Str::slug($request->nama);
@@ -58,12 +60,11 @@ class KegiatanController extends Controller
             $kegiatan->content  = $request->content;
             $kegiatan->save();
 
-            Session::flash('success','Kegiatan Berhasil ditambah !');
+            Session::flash('success', 'Kegiatan Berhasil ditambah !');
             return redirect()->route('backend-kegiatan.index');
         } catch (ErrorException $e) {
             throw new ErrorException($e->getMessage());
         }
-
     }
 
     /**
@@ -100,10 +101,10 @@ class KegiatanController extends Controller
         try {
             if ($request->image) {
                 $image = $request->file('image');
-                $nama_img = time()."_".$image->getClientOriginalName();
+                $nama_img = time() . "_" . $image->getClientOriginalName();
                 // isi dengan nama folder tempat kemana file diupload
                 $tujuan_upload = 'public/images/kegiatan';
-                $image->storeAs($tujuan_upload,$nama_img);
+                $image->storeAs($tujuan_upload, $nama_img);
             }
 
             $url = \Str::slug($request->nama);
@@ -115,7 +116,7 @@ class KegiatanController extends Controller
             $kegiatan->content      = $request->content;
             $kegiatan->save();
 
-            Session::flash('success','Kegiatan Berhasil diupdate !');
+            Session::flash('success', 'Kegiatan Berhasil diupdate !');
             return redirect()->route('backend-kegiatan.index');
         } catch (ErrorException $e) {
             throw new ErrorException($e->getMessage());
@@ -128,8 +129,48 @@ class KegiatanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // public function destroy($id): RedirectResponse
     public function destroy($id)
     {
-        //
+
+        // $kegiatan = Kegiatan::findOrFail($id);
+
+        // // if ($kegiatan->nama) {
+        // //     // kosongkan nama
+        // //     $kegiatan->nama = null;
+        // //     $kegiatan->save();
+        // // }
+        // // cek jika ada gambar
+        // if ($kegiatan->image) {
+        //     Storage::delete('public/images/kegiatan/' . $kegiatan->image);
+        // }
+        // // cek jika ada konten
+        // // if ($kegiatan->content) {
+        // //     // kosongkan konten
+        // //     $kegiatan->content = null;
+        // //     $kegiatan->save();
+        // // }
+        // $kegiatan->delete();
+        // return redirect('kegiatan');
+        // // ->route('kegiatan.index')
+        // // ->with(['success' => 'Data Berhasil Dihapus!']);
+
+        return "tes";
     }
 }
+    // {
+    //     $kegiatan = nama::findOrFail($id);
+    //     Storage::delete('public/images/kegiatan' . basename($kegiatan->image));
+    //     $kegiatan->delete();
+    //     return redirect()->route('kegiatan.index')->with(['success' => 'Data Berhasil Dihapus!']);
+    // }
+    // public function destroy(string $id)
+    // {
+
+    // $kegiatan::where('id', $id)->delete();
+    // return redirect()->to('kegiatan')->with('success', 'Berhasil Hapus Ektra Kulikuler');
+
+    // $kegiatan = Kegiatan::find($id);
+    // return view('backend.website.kegiatan.edit', compact('kegiatan'));
+
+// }

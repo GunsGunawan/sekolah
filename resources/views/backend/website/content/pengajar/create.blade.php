@@ -1,7 +1,7 @@
 @extends('layouts.backend.app')
 
 @section('title')
-   Tambah Pengajar
+Tambah Pengajar
 @endsection
 
 @section('content')
@@ -72,6 +72,12 @@
                                         <select name="mengajar" class="form-control @error('mengajar') is-invalid @enderror">
                                             <option value="">-- Pilih --</option>
                                             <option value="Matematika">Matematika<option>
+                                            <option value="Fisika">Fisika<option>
+                                            <option value="Kimia">Kimia<option>
+                                            <option value="Biologi">Biologi<option>
+                                            <option value="Bhs.Indo">Bhs.Indoesia<option>
+                                            <option value="Bhs.Ingg">Bhs,Inggris<option>
+                                            <option value="Sejarah">Sejarah<option>
                                         </select>
                                         @error('mengajar')
                                             <div class="invalid-feedback">
@@ -176,7 +182,6 @@
                                         @enderror
                                     </div>
                                 </div>
-                              
                             </div>
                             <button class="btn btn-primary" type="submit">Tambah</button>
                             <a href="{{route('backend-pengajar.index')}}" class="btn btn-warning">Batal</a>

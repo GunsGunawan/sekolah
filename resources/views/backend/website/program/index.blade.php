@@ -65,6 +65,10 @@
                                                     <td> {{$jurusans->is_active == 0 ? 'Aktif' : 'Tidak Aktif'}} </td>
                                                     <td>
                                                         <a href=" {{route('program-studi.edit', $jurusans->id)}} " class="btn btn-success btn-sm">Edit</a>
+                                                        <form onsubmit="return confirm('Yakin Akan Menghapus Prodi?')" class="d-inline" action="{{ url('kegiatan/'.$jurusans->id) }}" method="head">
+                                                            {{-- @csrf --}}
+                                                            {{-- @method('DELETE') --}}
+                                                        <button type="submit" name="submit" class="btn btn-danger btn-sm">Del</button>
                                                     </td>
                                                 </tr>
                                             @endforeach    

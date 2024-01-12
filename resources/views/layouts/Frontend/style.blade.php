@@ -1,3 +1,4 @@
+{{-- <<link rel="shortcut icon" href="{{ asset('favicon.png') }}" /> --}}
 <!-- Normalize CSS -->
 <link rel="stylesheet" href="{{asset('Assets/Frontend/css/normalize.css')}}">
 <!-- Main CSS -->

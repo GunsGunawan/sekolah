@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    {{-- <link rel="shortcut icon" type="image/x-icon" href="favicon.png"> --}}
+    <link rel="shortcut icon" href="{{ URL::to('Assets/icons/favicon.png') }}">
+    {{-- <link rel="shortcut icon" href="{{ Assets('icons/favicon.png') }}" /> --}}
     @include('layouts.Frontend.style')
 </head>
 

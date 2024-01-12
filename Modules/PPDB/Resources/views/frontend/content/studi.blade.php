@@ -1,7 +1,7 @@
    
  <div class="container">
         <h1 class="about-title">Program Studi</h1>
-        <p class="about-sub-title">Program Studi di SMK Yadika Natar, Pilih Passion Kamu!</p>
+        <p class="about-sub-title">Program Studi di SMA Negeri 1 Praya, Pilih Passion Kamu!</p>
     </div>
     <div class="container">
         <div class="row">
@@ -10,7 +10,7 @@
                     <div class="service-box-icon">
                         <a href="#"><i class="fa fa-book" aria-hidden="true"></i></a>
                     </div>
-                    <h3><a href="#">Teknik Komputer & Jaringan</a></h3>
+                    <h3><a href="#">Ilmu Pengetahuan Alam</a></h3>
                     
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <div class="service-box-icon">
                         <a href="#"><i class="fa fa-book" aria-hidden="true"></i></a>
                     </div>
-                    <h3><a href="#">Teknik Jaringan Akses Telekomunikasi</a></h3>
+                    <h3><a href="#">Ilmu Pengetahuan Sosial</a></h3>
                     
                 </div>
             </div>
@@ -28,7 +28,7 @@
                     <div class="service-box-icon">
                         <a href="#"><i class="fa fa-book" aria-hidden="true"></i></a>
                     </div>
-                    <h3><a href="#">Multimedia</a></h3>
+                    <h3><a href="#">Bahasa</a></h3>
                    
                 </div>
             </div>

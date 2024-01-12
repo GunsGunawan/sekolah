@@ -49,10 +49,10 @@ class ProgramController extends Controller
 
             if ($jurusan) {
                 $foto = $request->file('image');
-                $nama_foto = time()."_".$foto->getClientOriginalName();
+                $nama_foto = time() . "_" . $foto->getClientOriginalName();
                 // isi dengan nama folder tempat kemana file diupload
                 $tujuan_upload = 'public/images/jurusan';
-                $foto->storeAs($tujuan_upload,$nama_foto);
+                $foto->storeAs($tujuan_upload, $nama_foto);
 
                 $dataJurusan = new DataJurusan;
                 $dataJurusan->jurusan_id    = $jurusan->id;
@@ -62,9 +62,8 @@ class ProgramController extends Controller
             }
 
             DB::commit();
-            Session::flash('success','Program Studi Berhasil ditambah !');
+            Session::flash('success', 'Program Studi Berhasil ditambah !');
             return redirect()->route('program-studi.index');
-
         } catch (ErrorException $e) {
             DB::rollback();
             throw new ErrorException($e->getMessage());
@@ -114,10 +113,10 @@ class ProgramController extends Controller
             if ($jurusan) {
                 if ($request->image) {
                     $foto = $request->file('image');
-                    $nama_foto = time()."_".$foto->getClientOriginalName();
+                    $nama_foto = time() . "_" . $foto->getClientOriginalName();
                     // isi dengan nama folder tempat kemana file diupload
                     $tujuan_upload = 'public/images/jurusan';
-                    $foto->storeAs($tujuan_upload,$nama_foto);
+                    $foto->storeAs($tujuan_upload, $nama_foto);
 
                     $dataJurusan = DataJurusan::where('jurusan_id', $id)->first();
                     $dataJurusan->content       = $request->content;
@@ -127,12 +126,11 @@ class ProgramController extends Controller
             }
 
             DB::commit();
-            Session::flash('success','Program Studi Berhasil diupdate !');
+            Session::flash('success', 'Program Studi Berhasil diupdate !');
             return redirect()->route('program-studi.index');
-            
         } catch (ErrorException $e) {
             DB::rollback();
-            Session::flash('error','Program Studi Gagal diupdate !');
+            Session::flash('error', 'Program Studi Gagal diupdate !');
             throw new ErrorException($e->getMessage());
         }
     }
