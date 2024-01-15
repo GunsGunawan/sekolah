@@ -1,12 +1,12 @@
 ## Tentang Sekolahku
 
-Sekolahku adalah aplikasi manajemen sekolah berbasis website yang di bangun dan di kembangkan dengan Framework Laravel. Fitur-fitur pada aplikasi Sekolahku antara lain :
+Sekolahku adalah aplikasi manajemen sekolah berbasis website yang di bangun dan di kembangkan dengan Framework Laravel. Fitur-fitur pada aplikasi SchoolVibe antara lain :
 
 - Website Sekolah (Done)
 - PPDB (Done)
-- Perpustakaan (Done)
+- Perpustakaan (Belum berfungsi)
 - Sistem Pembayaran Sekolah SPP (Done)
-- Alumni
+- Alumni(Belum Berfungsi)
 
 ## Installation
 
